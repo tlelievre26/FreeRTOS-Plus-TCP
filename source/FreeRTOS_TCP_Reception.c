@@ -131,8 +131,8 @@
             if( pxNetworkBuffer->xDataLength > uxOptionOffset )
             {
                 /* Validate options size calculation. */
-                if( uxOptionsLength <= ( pxNetworkBuffer->xDataLength - uxOptionOffset ) )
-                {
+                // if( uxOptionsLength <= ( pxNetworkBuffer->xDataLength - uxOptionOffset ) )
+                // {
                     if( ( pxTCPHeader->ucTCPFlags & tcpTCP_FLAG_SYN ) != ( uint8_t ) 0U )
                     {
                         xHasSYNFlag = pdTRUE;
@@ -168,7 +168,7 @@
                         uxOptionsLength -= ( size_t ) lResult;
                         pucPtr = &( pucPtr[ lResult ] );
                     }
-                }
+                // }
             }
         }
 
